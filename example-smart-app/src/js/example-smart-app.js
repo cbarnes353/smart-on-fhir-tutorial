@@ -30,7 +30,7 @@
 
           var fname = '';
           var lname = '';
-          var other = '';
+          
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
@@ -48,7 +48,8 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          var other = p.fname;
+          p.other = p.fname;
+          
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
@@ -83,6 +84,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      other: {value: ''},
     };
   }
 
@@ -126,7 +128,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#other').html("He's A Baller too");
+    $('#other').html(p.other);
   };
 
 })(window);
