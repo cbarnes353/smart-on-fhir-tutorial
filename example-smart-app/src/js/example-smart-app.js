@@ -48,7 +48,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          other = p.fname;
+          var other = p.fname;
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
