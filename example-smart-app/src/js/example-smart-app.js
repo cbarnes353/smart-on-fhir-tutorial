@@ -126,7 +126,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#other').html(p.other);
+    $('#other').html("He's A Baller too");
   };
 
 })(window);
