@@ -48,7 +48,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          p.other = patient.birthDate;
+          p.other = patient.identifier;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
