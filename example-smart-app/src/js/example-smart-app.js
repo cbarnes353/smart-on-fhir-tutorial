@@ -21,6 +21,18 @@
                       }
                     }
                   });
+        
+        var medstmt = smart.patient.api.fetchAll({
+                    type: 'MedicationStatement',
+                    query: {
+                      status: { 'active'
+                      }
+                    }
+                  });
+        
+        
+        
+        
 
         $.when(pt, obv).fail(onError);
 
