@@ -30,19 +30,19 @@
                     console.log(response);
                   var lfin = '';  
                    var fin = '';
-                   var response = '';
+                   var reason = '';
           
                     lfin = response[1]; //[1].identifier[0].value;
                     for (i=lfin.identifier.length; i-- ;) {
                         if (lfin.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
                         fin = lfin.identifier[i].value;
-                        response = lfin.reason[i].text;  
+                        reason = lfin.reason[i].text;  
                         }  
                     }
                     console.log("FIN:"+fin);
                     $('#fin').html(fin);
-                    console.log("RESPONSE:"+ response);
-                    $('#response').html(response);
+                    console.log("REASON:"+ reason);
+                    $('#reason').html(reason);
           
           
                   });
@@ -122,8 +122,8 @@
       ldl: {value: ''},
       hdl: {value: ''},
       other: {value: ''},
-      fin: {value: ''}
-    //  response: {value: ''}
+      fin: {value: ''},
+      reason: {value: ''}
     };
   }
 
