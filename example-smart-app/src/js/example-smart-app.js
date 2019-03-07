@@ -33,7 +33,7 @@
                   }).then(function(response){
                     console.log(response);
                     var fin = ''; 
-                    fin = response[0].identifier[0].value;
+                    fin = response[1].identifier[0].value;
                     console.log("FIN TEST: " && fin)
                   });
         
