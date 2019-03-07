@@ -11,6 +11,10 @@
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
+        /*
+        var encounter = smart.encounter;
+        var er = encounter.read();
+        */
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
@@ -21,13 +25,26 @@
                       }
                     }
                   });
-        
+        var enct = smart.patient.api.fetchAll({
+                    type: 'Encounter',
+                    query: {
+                      patient: {
+                        $or: [patient._id]
+                      }
+                    }
+                  });
 
         
-        
-        
-        
+         $.when(pt, enct).fail(onError);
+        $.when(pt, enct).done(function(patient, enct) {
+        var fin = '';
+          
 
+        }  
+          
+          
+          
+          
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
