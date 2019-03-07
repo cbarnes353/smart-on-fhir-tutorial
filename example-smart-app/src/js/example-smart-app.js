@@ -38,14 +38,14 @@
           var mrn = '';
           var fin = '';
           var location = '';
-          /*
+          
           for (i = 0; i=patient.identifier.length ; i++) {
               if patient.identifier[i].system  = 'urn:oid:2.2.2.2.2.2'){
                 mrn = patient.identifier[i].value;
               }  
 
           }
-          */
+          
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
@@ -64,6 +64,7 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.other = p.height;
+          p.mrn = mrn;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -141,6 +142,7 @@
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
+    $('#mrn').html(p.mrn);
     $('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
