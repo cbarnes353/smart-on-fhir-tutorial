@@ -45,8 +45,7 @@
           var fname = '';
           var lname = '';
           var mrn = '';
-         var fin = '';
-          
+               
           
           for (i=patient.identifier.length; i-- ;) {
               if (patient.identifier[i].system  == 'urn:oid:2.2.2.2.2.2'){
@@ -85,7 +84,7 @@
           p.height = getQuantityValueAndUnit(height[0]);
           p.other = p.height;
           p.mrn = mrn;
-          p.enct = enct;
+          p.enct = enct._id.value;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
