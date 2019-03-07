@@ -36,7 +36,7 @@
                         fin = lfin.identifier[i].value;
                         }  
                     }
-                    
+                    console.log("FIN:"+fin);
                     $('#fin').html(fin);
                   });
         
