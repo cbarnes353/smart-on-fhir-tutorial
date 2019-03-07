@@ -54,7 +54,7 @@
           }
   
           
-          fin = enct.entry[0].identifier.value;
+          fin = enct.entry[0].resource.identifier.0.value;
            /*for (i=enct.length; i-- ;) {
               if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
                  fin = enct.identifier[i].value;
