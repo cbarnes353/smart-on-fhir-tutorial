@@ -25,6 +25,8 @@
                       }
                     }
                   });
+        
+        /*
         var enct = smart.patient.api.fetchAll({
                     type: 'Encounter',
                     query: {
@@ -34,7 +36,7 @@
                     }
                   });
 
-        
+        */
        
           
           
