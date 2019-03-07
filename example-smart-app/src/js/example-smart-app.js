@@ -30,16 +30,15 @@
         var enct = smart.patient.api.fetchAll({
                     type: 'Encounter'
                     
-                  }).then(function(response){
-          response = response[0];
-          console.log(response);
-        };
+                  });
         
         
         
-        $.when(pt, obv).fail(onError);
         
-        $.when(pt, obv).done(function(patient, obv) {
+        $.when(pt, obv, enct).fail(onError);
+        
+        $.when(pt, obv, enct).done(function(patient, obv, encounter) {
+          console.log(encounter)
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender
           var fname = '';
@@ -84,7 +83,7 @@
           p.height = getQuantityValueAndUnit(height[0]);
           p.other = p.height;
           p.mrn = mrn;
-          p.enct = enct._id.value;
+          p.enct = enct.system.value;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
