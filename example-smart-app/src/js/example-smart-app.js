@@ -30,17 +30,15 @@
                     console.log(response);
                     var fin = ''; 
                     fin = response[1].identifier[0].value;
-                    console.log("FIN TEST: " && fin)
+                    console.log("FIN TEST: " && fin);
                   });
         
-        
-        
-        
+ 
         $.when(pt, obv, enct).fail(onError);
         
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
-          var gender = patient.gender
+          var gender = patient.gender;
           var fname = '';
           var lname = '';
           var mrn = '';
@@ -53,10 +51,6 @@
 
           };
    
-
-
-          
-          
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
