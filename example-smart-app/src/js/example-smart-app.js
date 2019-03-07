@@ -11,10 +11,6 @@
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
-        /*
-        var encounter = smart.encounter;
-        var er = encounter.read();
-        */
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
@@ -55,17 +51,10 @@
                 mrn = patient.identifier[i].value;
               }  
 
-          }
+          };
    
-;
-  /*
-          for (i=enct.length; i-- ;) {
-              if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
-                 fin = enct.identifier[i].value;
-              }  
 
-          } 
-          */
+
           
           
 
