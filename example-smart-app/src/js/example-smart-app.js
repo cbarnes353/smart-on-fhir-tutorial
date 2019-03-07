@@ -35,12 +35,7 @@
                   });
 
         
-         $.when(pt, enct).fail(onError);
-        $.when(pt, enct).done(function(patient, enct) {
-        var fin = '';
-          
-
-        }  
+       
           
           
           
