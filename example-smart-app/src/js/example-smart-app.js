@@ -56,6 +56,7 @@
           }
   
            fin = enct.entry[0].resource.identifier[0].value;
+          console.log("FIN TEST: " && fin);
   /*
           for (i=enct.length; i-- ;) {
               if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
