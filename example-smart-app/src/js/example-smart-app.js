@@ -36,14 +36,16 @@
           var fname = '';
           var lname = '';
           var mrn = '';
-          
+          var fin = '';
+          var location = '';
+          /*
           for (i = 0; i=patient.identifier.length ; i++) {
               if patient.identifier[i].system  = 'urn:oid:2.2.2.2.2.2'){
                 mrn = patient.identifier[i].value;
               }  
 
           }
-          
+          */
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
