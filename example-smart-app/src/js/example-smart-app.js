@@ -36,7 +36,7 @@
                     for (i=lfin.identifier.length; i-- ;) {
                         if (lfin.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
                         fin = lfin.identifier[i].value;
-                        response = lfin.reason[0].text;  
+                        response = lfin.reason[i].text;  
                         }  
                     }
                     console.log("FIN:"+fin);
