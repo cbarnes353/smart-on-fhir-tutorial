@@ -29,7 +29,7 @@
                     type: 'Encounter',
                     query: {
                       patient: {
-                        $or: [patient._id]
+                        [patient._id]
                       }
                     }
                   });
