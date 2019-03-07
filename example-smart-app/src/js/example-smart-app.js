@@ -32,10 +32,17 @@
 
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
-          var gender = patient.gender;
-          var mrn = patient.identifier;
+          var gender = patient.gender
           var fname = '';
           var lname = '';
+          var mrn = '';
+          
+          for (i = 0; i=patient.identifier.length ; i++) {
+              if patient.identifier[i].system  = 'urn:oid:2.2.2.2.2.2'){
+                mrn = patient.identifier[i].value;
+              }  
+
+          }
           
 
           if (typeof patient.name[0] !== 'undefined') {
