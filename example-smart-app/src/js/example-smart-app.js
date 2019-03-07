@@ -36,6 +36,8 @@
                         fin = lfin.identifier[i].value;
                         }  
                     }
+                    
+                    $('#fin').html(fin);
                   });
         
  
@@ -159,7 +161,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#other').html(p.other);
-    $('#fin').html(p.fin);
+    
   };
 
 })(window);
