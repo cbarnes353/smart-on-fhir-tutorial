@@ -38,7 +38,8 @@
         $.when(pt, obv, enct).fail(onError);
         
         $.when(pt, obv, enct).done(function(patient, obv, encounter) {
-          console.log(encounter)
+          console.log(encounter);
+          console.log(enct);
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender
           var fname = '';
@@ -53,8 +54,7 @@
 
           }
   
-          
-          fin = enct.entry[0].resource.identifier.0.value;
+           fin = enct.entry[0].resource.identifier[0].value;
            /*for (i=enct.length; i-- ;) {
               if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
                  fin = enct.identifier[i].value;
