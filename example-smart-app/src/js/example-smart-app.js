@@ -26,17 +26,13 @@
                     }
                   });
         
-        /*
+        
         var enct = smart.patient.api.fetchAll({
-                    type: 'Encounter',
-                    query: {
-                      "patient": 
-                        patient._id
-                      
-                    }
+                    type: 'Encounter'
+
                   });
 
-        */
+        
        
           
           
