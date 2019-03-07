@@ -35,10 +35,8 @@
           var gender = patient.gender
           var fname = '';
           var lname = '';
-          var mrn = patient.gender;
-          var fin = '';
-          var location = '';
-          
+          var mrn = '';
+         
           
           
           for (i=patient.identifier.length; i-- ;) {
