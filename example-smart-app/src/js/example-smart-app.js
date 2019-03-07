@@ -93,6 +93,8 @@
       fname: {value: ''},
       lname: {value: ''},
       mrn: {value: ''},
+      fin: {value: ''},
+      location: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
       height: {value: ''},
