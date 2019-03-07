@@ -32,7 +32,9 @@
                     
                   }).then(function(response){
                     console.log(response);
-        
+                    var fin = ''; 
+                    fin = enct[0].identifier.value;
+                    console.log("FIN TEST: " && fin)
                   });
         
         
@@ -46,7 +48,7 @@
           var fname = '';
           var lname = '';
           var mrn = '';
-          var fin = '';     
+              
           
           for (i=patient.identifier.length; i-- ;) {
               if (patient.identifier[i].system  == 'urn:oid:2.2.2.2.2.2'){
@@ -54,14 +56,8 @@
               }  
 
           }
-  
-          
-          
-          
-          
-           fin = enct[0].identifier.value;
-          
-          console.log("FIN TEST: " && fin);
+   
+;
   /*
           for (i=enct.length; i-- ;) {
               if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
