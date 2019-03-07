@@ -31,18 +31,22 @@
                   var lfin = '';  
                    var fin = '';
                    var reason = '';
+                  var location = '';
           
                     lfin = response[1]; //[1].identifier[0].value;
                     for (i=lfin.identifier.length; i-- ;) {
                         if (lfin.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
                         fin = lfin.identifier[i].value;
                         reason = lfin.reason[i].text;  
+                       location = lfin.location[i].display;   
                         }  
                     }
                     console.log("FIN:"+fin);
                     $('#fin').html(fin);
                     console.log("REASON:"+ reason);
                     $('#reason').html(reason);
+                    console.log("LOCATION:"+ location);
+                    $('#location').html(location);
           
           
                   });
@@ -123,7 +127,8 @@
       hdl: {value: ''},
       other: {value: ''},
       fin: {value: ''},
-      reason: {value: ''}
+      reason: {value: ''},
+      location: {value: ''}
     };
   }
 
