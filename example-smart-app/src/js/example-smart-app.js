@@ -85,7 +85,7 @@
           p.height = getQuantityValueAndUnit(height[0]);
           p.other = p.height;
           p.mrn = mrn;
-          p.fin = response;
+          p.enct = enct;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -123,7 +123,7 @@
       ldl: {value: ''},
       hdl: {value: ''},
       other: {value: ''},
-      response: {value: ''}
+      enct: {value: ''}
     };
   }
 
@@ -169,7 +169,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#other').html(p.other);
-    $('#response').html(p.response);
+    $('#enct').html(p.enct);
   };
 
 })(window);
