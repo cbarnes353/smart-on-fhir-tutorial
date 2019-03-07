@@ -83,7 +83,7 @@
           p.height = getQuantityValueAndUnit(height[0]);
           p.other = p.height;
           p.mrn = mrn;
-          p.enct = enct.system.value;
+          p.enct = enct.identifier.value;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
