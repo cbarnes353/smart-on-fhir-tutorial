@@ -44,7 +44,7 @@
           var fname = '';
           var lname = '';
           var mrn = '';
-               
+          var fin = '';     
           
           for (i=patient.identifier.length; i-- ;) {
               if (patient.identifier[i].system  == 'urn:oid:2.2.2.2.2.2'){
@@ -54,13 +54,13 @@
           }
   
           
-          /*
-           for (i=enct._id.length; i-- ;) {
-              if (patient.identifier[i].system  == 'urn:oid:2.2.2.2.2.2'){
-                mrn = patient.identifier[i].value;
+          
+           for (i=enct.length; i-- ;) {
+              if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
+                 fin = enct.identifier[i].value;
               }  
 
-          } */
+          } 
           
           
           
@@ -83,7 +83,7 @@
           p.height = getQuantityValueAndUnit(height[0]);
           p.other = p.height;
           p.mrn = mrn;
-          p.enct = enct.identifier.value;
+          p.fin = fin;
           
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -121,7 +121,7 @@
       ldl: {value: ''},
       hdl: {value: ''},
       other: {value: ''},
-      enct: {value: ''}
+      fin: {value: ''}
     };
   }
 
@@ -167,7 +167,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#other').html(p.other);
-    $('#enct').html(p.enct);
+    $('#fin').html(p.fin);
   };
 
 })(window);
