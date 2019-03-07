@@ -28,9 +28,14 @@
                     
                   }).then(function(response){
                     console.log(response);
-                    var fin = ''; 
-                    fin = response[1].identifier[0].value;
-              
+                  var lfin = '';  
+                   var fin = ''; 
+                    lfin = response[1]; //[1].identifier[0].value;
+                    for (i=lfin.identifier.length; i-- ;) {
+                        if (lfin.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
+                        fin = lfin.identifier[i].value;
+                        }  
+                    }
                   });
         
  
@@ -49,7 +54,7 @@
                 mrn = patient.identifier[i].value;
               }  
 
-          };
+          }
    
 
           if (typeof patient.name[0] !== 'undefined') {
