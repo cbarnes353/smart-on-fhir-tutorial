@@ -29,24 +29,23 @@
         
         var enct = smart.patient.api.fetchAll({
                     type: 'Encounter'
-
-                  });
-
+                    
+                  }).then(function(response){
+          response = response[0];
+          console.log(response);
+        };
         
-       
-          
-          
-          
-          
+        
+        
         $.when(pt, obv).fail(onError);
-
+        
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender
           var fname = '';
           var lname = '';
           var mrn = '';
-         
+         var fin = '';
           
           
           for (i=patient.identifier.length; i-- ;) {
@@ -55,6 +54,17 @@
               }  
 
           }
+  
+          
+          /*
+           for (i=enct._id.length; i-- ;) {
+              if (patient.identifier[i].system  == 'urn:oid:2.2.2.2.2.2'){
+                mrn = patient.identifier[i].value;
+              }  
+
+          } */
+          
+          
           
 
           if (typeof patient.name[0] !== 'undefined') {
