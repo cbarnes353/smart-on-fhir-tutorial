@@ -54,14 +54,14 @@
           }
   
           
-          
-           for (i=enct.length; i-- ;) {
+          fin = enct.entry[0].identifier.value;
+           /*for (i=enct.length; i-- ;) {
               if (enct.identifier[i].system  == 'urn:oid:3.3.3.3.3.3'){
                  fin = enct.identifier[i].value;
               }  
 
           } 
-          
+          */
           
           
 
