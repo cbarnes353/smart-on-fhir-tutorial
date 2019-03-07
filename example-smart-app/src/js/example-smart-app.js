@@ -33,7 +33,7 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-
+          var mrn = patient.identifier;
           var fname = '';
           var lname = '';
           
@@ -83,6 +83,7 @@
     return {
       fname: {value: ''},
       lname: {value: ''},
+      mrn: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
       height: {value: ''},
