@@ -30,7 +30,7 @@
                     console.log(response);
                     var fin = ''; 
                     fin = response[1].identifier[0].value;
-                    console.log("FIN TEST: " + fin);
+              
                   });
         
  
