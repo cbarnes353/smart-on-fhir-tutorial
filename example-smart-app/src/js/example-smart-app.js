@@ -23,7 +23,7 @@
                   });
         
         
-       /* var enct = smart.patient.api.fetchAll({
+        var enct = smart.patient.api.fetchAll({
                     type: 'Encounter'
                     
                   }).then(function(response){
@@ -53,7 +53,7 @@
         
  
         $.when(pt, obv, enct).fail(onError);
-        */
+        
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
