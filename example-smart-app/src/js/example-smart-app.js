@@ -90,6 +90,7 @@
           p.mrn = mrn;
           p.fin = fin;
           
+          
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
           }
@@ -174,6 +175,10 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#other').html(p.other);
+     $('#prfname').html(p.fname);
+    $('#prlname').html(p.lname);
+     $('#prgender').html(p.gender);
+    $('#prbirthdate').html(p.birthdate);
     
   };
 
