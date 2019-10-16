@@ -66,10 +66,10 @@
           var fname = '';
           var lname = '';
           var mrn = '';
-           var myid = patient._id[0];
-          var myidd = patient.identification[0];
-           console.log("IIID:" + myid);
-              console.log("bbbD:" + myidd);
+        //   var myid = patient._id[0];
+       //   var myidd = patient.identification[0];
+       //    console.log("IIID:" + myid);
+        //      console.log("bbbD:" + myidd);
           
           for (i=patient.identifier.length; i-- ;) {
               if (patient.identifier[i].system  == 'urn:oid:2.2.2.2.2.2'){
