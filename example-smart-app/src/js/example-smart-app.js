@@ -10,7 +10,7 @@
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
-        console.log("Patient" + JSON.stringify(patient))
+        console.log("Patient" + JSON.stringify(patient));
         var pt = patient.read();
         
         var myday = smart.patient.api.fetchAll({
