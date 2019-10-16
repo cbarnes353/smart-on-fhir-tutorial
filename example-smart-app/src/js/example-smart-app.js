@@ -12,7 +12,9 @@
         var patient = smart.patient;
         var pt = patient.read();
         
-        console.log("ID:" + patient.identifier);
+        var myid = patient.identifier;
+        
+        console.log("IID:" + myid);
         
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
