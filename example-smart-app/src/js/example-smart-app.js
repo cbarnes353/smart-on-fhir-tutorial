@@ -18,7 +18,7 @@
                     
                   }).then(function(response){
                     console.log("MyDay" + response);
-        
+                  });
 
         
         var obv = smart.patient.api.fetchAll({
