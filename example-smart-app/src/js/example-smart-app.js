@@ -13,7 +13,11 @@
         console.log("Patient" + patient)
         var pt = patient.read();
         
-      var myday = 
+        var myday = smart.patient.api.fetchAll({
+                    type: 'Encounter'
+                    
+                  }).then(function(response){
+                    console.log("MyDay" + response);
         
 
         
