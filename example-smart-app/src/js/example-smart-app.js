@@ -62,7 +62,7 @@
           var fname = '';
           var lname = '';
           var mrn = '';
-           var myid = patient.identifier;
+           var myid = patient._id;
         
            console.log("IIID:" + myid);
               
