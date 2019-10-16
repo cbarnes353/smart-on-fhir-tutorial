@@ -12,10 +12,7 @@
         var patient = smart.patient;
         var pt = patient.read();
         
-        var myid = patient.identifier;
-        
-        console.log("IID:" + myid);
-        
+      
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
@@ -65,6 +62,9 @@
           var fname = '';
           var lname = '';
           var mrn = '';
+           var myid = patient.identifier;
+        
+           console.log("IIID:" + myid);
               
           
           for (i=patient.identifier.length; i-- ;) {
