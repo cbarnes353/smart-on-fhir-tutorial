@@ -17,8 +17,9 @@
                     type: 'Patient'
                     
                   }).then(function(response){
+                    var json = JSON.parse(response); 
                     var outline = response.text
-                    console.log("MyDay" + response);
+                    console.log("MyDay" + json.id);
                     console.log(JSON.stringify(response));
                   });
 
