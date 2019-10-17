@@ -11,15 +11,12 @@
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         console.log("Patient" + JSON.stringify(patient));
+        console.log("MYPatient" + patient.id);
         var pt = patient.read();
         
         var myday = smart.patient.api.fetchAll({
-                    type: 'Patient'
-                    
+                    type: 'Patient'                    
                   }).then(function(response){
-                    var json = JSON.parse(response); 
-                    var outline = response.text
-                    console.log("MyDay" + json.id);
                     console.log(JSON.stringify(response));
                   });
 
